@@ -663,7 +663,7 @@ static int sdcardfs_permission(struct inode *inode, int mask)
 	 * So we just let they do the things.
 	 * If there are any security hole, just uncomment following if block.
 	 */
-#if 0
+
 	if (!err) {
 		/*
 		 * Permission check on lower_inode(=EXT4).
@@ -677,7 +677,7 @@ static int sdcardfs_permission(struct inode *inode, int mask)
 
 		REVERT_CRED();
 	}
-#endif
+
 	return err;
 
 }
